@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/inicioFragment">
+
+    <fragment
+        android:id="@+id/inicioFragment"
+        android:name="com.mercadolibre.mlcandidate.fragmentos.InicioFragment"
+        android:label="fragment_inicio"
+        tools:layout="@layout/fragment_inicio" >
+        <action
+            android:id="@+id/action_inicioFragment_to_listaProductosFragment"
+            app:destination="@id/listaProductosFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/listaProductosFragment"
+        android:name="com.mercadolibre.mlcandidate.fragmentos.ListaProductosFragment"
+        android:label="fragment_lista_productos"
+        tools:layout="@layout/fragment_lista_productos" >
+        <action
+            android:id="@+id/action_listaProductosFragment_to_detalleProductoFragment"
+            app:destination="@id/detalleProductoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detalleProductoFragment"
+        android:name="com.mercadolibre.mlcandidate.fragmentos.DetalleProductoFragment"
+        android:label="fragment_detalle_producto"
+        tools:layout="@layout/fragment_detalle_producto" >
+        <action
+            android:id="@+id/action_detalleProductoFragment_to_listaProductosFragment"
+            app:destination="@id/listaProductosFragment" />
+    </fragment>
+</navigation>
